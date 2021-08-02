@@ -19,8 +19,8 @@ do_install () {
     install -D -m755 ${S}/binary-for-linux-64-bit ${D}${bindir}/elm
 }
 
-INSANE_SKIP_${PN} += "already-stripped"
+INSANE_SKIP:${PN} += "already-stripped"
 BBCLASSEXTEND = "native nativesdk"
 
-COMPATIBLE_HOST_class-target = "null"
+COMPATIBLE_HOST:class-target = "null"
 
